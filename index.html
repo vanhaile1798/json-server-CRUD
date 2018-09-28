@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>axios + json-server CRUD</title>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		axios.get('http://localhost:8081/users').then((res) => {
+			console.log(res.data);
+		});
+		axios.post('http://localhost:8081/users', {
+			id: 3,
+			name: "Van Anh Nguyen"
+		}).then((res) => {
+			console.log(res.data);
+		});
+		axios({
+			method: 'put',
+			url: 'http://localhost:8081/users/1',
+			
+			headers: {'Content-Type': 'application/json'},
+			data: {
+				name: "Le Van Hai"
+			}
+		}).then(() => {console.log('Updated');});
+		axios.delete('http://localhost:8081/users/3').then(() => {console.log('Deleted');});
+	</script>
+</body>
+</html>

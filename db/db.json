@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Hoang Vinh Luat"
+    },
+    {
+      "id": 2,
+      "name": "Hai Le"
+    },
+    {
+      "id": 5,
+      "name": "Nguyen Van Anh"
+    }
+  ]
+}
